@@ -1,0 +1,107 @@
+/* === Base Styles === */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  padding-top: 80px; /* Pushes content down below navbar */
+}
+
+section {
+  padding: 100px 0;
+}
+
+h1, h2 {
+  font-weight: bold;
+}
+
+/* === Navbar === */
+.navbar .nav-link {
+  font-weight: 500;
+}
+
+.navbar .btn {
+  border-radius: 20px;
+  font-weight: 600;
+  background-color: #0d6efd;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .btn:hover {
+  background-color: #0b5ed7;
+  color: white;
+}
+
+/* === Services Section === */
+.service-wrapper {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.service-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+.service-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease-in-out;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-wrapper:hover .service-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-description p {
+  margin-bottom: 10px;
+}
+
+.service-description .read-more {
+  border-radius: 20px;
+  padding: 6px 16px;
+}
+
+/* === Footer === */
+.footer {
+  background-color: #111;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-left img {
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.footer .social-contact-icons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.footer .icon {
+  font-size: 20px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.footer .icon:hover {
+  color: #0d6efd;
+}
