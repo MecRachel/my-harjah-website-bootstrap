@@ -38,6 +38,9 @@ h1, h2 {
   transition: transform 0.3s ease;
   cursor: pointer;
 }
+.service-wrapper h3 {
+  font-size: 17px;
+} 
 
 .service-wrapper:hover {
   transform: translateY(-5px);
