@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Harjah - Innovative solutions for your business needs, including web development, mobile apps, and UI design." />
+  <meta name="keywords" content="Harjah, software development, web development, mobile apps, UI design, IT services" />
+  <meta name="author" content="Harjah" />
   <title>Harjah - Solutions for Your Business</title>
 
   <!-- Three.js and Vanta.js -->
@@ -13,10 +16,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 
   <!-- AOS Animations -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -47,6 +50,9 @@
         <li class="nav-item">
           <a class="btn btn-primary text-white px-3 py-1 ms-2" href="#contact">Contact Us</a>
         </li>
+        <li class="nav-item">
+          <button id="langToggle" class="btn btn-outline-secondary px-3 py-1 ms-2">عربي</button>
+        </li>
       </ul>
     </div>
   </div>
@@ -62,13 +68,13 @@
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="py-5 text-center bg-light" >
+<section id="services" class="py-5 text-center bg-light">
   <div class="container" style="margin-bottom: 100px; margin-top: 100px;">
     <h2 class="mb-5 fw-bold">Our Services</h2>
     <div class="row g-4 justify-content-center">
       <div class="col-md-4">
         <div class="service-wrapper position-relative overflow-hidden border rounded shadow p-3 bg-white">
-          <img src="images/webDev.gif" alt="Web Development" class="img-fluid mb-3" style="width: 120px; height: 140px; margin-bottom: 30px;">
+          <img src="images/webDev.gif" alt="Web Development Service" class="img-fluid mb-3" style="width: 120px; height: 140px; margin-bottom: 30px;">
           <h3 class="fw-semibold">Web <br/> Development</h3>
           <div class="service-description position-absolute top-0 start-0 w-100 h-100 bg-white d-flex flex-column justify-content-center align-items-center text-center p-3">
             <p>Elevate your brand with high-performance, scalable websites and web applications.</p>
@@ -78,7 +84,7 @@
       </div>
       <div class="col-md-4">
         <div class="service-wrapper position-relative overflow-hidden border rounded shadow p-3 bg-white">
-          <img src="images/mobileDev.gif" alt="Mobile Development" class="img-fluid mb-3"style="width: 120px; height: 140px; margin-bottom: 30px;">
+          <img src="images/mobileDev.gif" alt="Mobile Development Service" class="img-fluid mb-3" style="width: 120px; height: 140px; margin-bottom: 30px;">
           <h3 class="fw-semibold">Mobile <br/> Development</h3>
           <div class="service-description position-absolute top-0 start-0 w-100 h-100 bg-white d-flex flex-column justify-content-center align-items-center text-center p-3">
             <p>Power up your business with sleek, high-performing mobile apps for iOS and Android.</p>
@@ -88,7 +94,7 @@
       </div>
       <div class="col-md-4">
         <div class="service-wrapper position-relative overflow-hidden border rounded shadow p-3 bg-white">
-          <img src="images/UI_design.gif" alt="UI Design" class="img-fluid mb-3" style="width: 120px; height: 140px; margin-bottom: 30px;">
+          <img src="images/UI_design.gif" alt="UI Design Service" class="img-fluid mb-3" style="width: 120px; height: 140px; margin-bottom: 30px;">
           <h3 class="fw-semibold">UI <br/> Design</h3>
           <div class="service-description position-absolute top-0 start-0 w-100 h-100 bg-white d-flex flex-column justify-content-center align-items-center text-center p-3">
             <p>Captivate your audience with stunning, user-centric designs.</p>
@@ -100,11 +106,74 @@
   </div>
 </section>
 
-<!-- ABOUT US -->
-<section id="about" class="py-5 text-center" data-aos="fade-up">
-  <div class="container" style="margin-bottom: 100px; margin-top: 100px;">
-    <h2 class="mb-4">About Us</h2>
-    <p>We are a passionate team of developers and designers committed to delivering high-quality websites and digital experiences. With creativity, collaboration, and code, we turn ideas into impactful realities.</p>
+<!-- About Us Section -->
+<section id="about" class="py-5 bg-light" data-aos="fade-up">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold">About Us</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="fw-semibold">Company Background</h3>
+        <p>
+          Founded in the heart of Muscat, Harjah is a dynamic software
+          development company driven by a passion for technology and
+          innovation.
+        </p>
+        <p>
+          Established with the vision of transforming businesses through
+          digital solutions, we specialize in crafting cutting-edge
+          websites, mobile applications, and IT services tailored to meet
+          modern market demands.
+        </p>
+        <p>
+          Our expertise spans across various industries, helping startups,
+          enterprises, and individuals build digital experiences that are
+          scalable, secure, and user-friendly.
+        </p>
+        <h3 class="fw-semibold">Our Vision</h3>
+        <p>
+          At Harjah, we believe technology should be an enabler, not a
+          barrier. Our vision is to empower businesses with seamless
+          digital transformation through intuitive design, robust
+          development, and strategic IT consulting. We strive to bridge
+          the gap between ideas and execution, ensuring that every
+          solution we deliver drives measurable growth and efficiency.
+        </p>
+        <h3 class="fw-semibold">Team</h3>
+        <p>
+          We are a small but mighty team of two—skilled, passionate, and
+          committed to building impactful digital solutions. With a blend
+          of creativity, technical expertise, and problem-solving skills,
+          we work closely with clients to transform their visions into
+          reality. Our agility allows us to adapt quickly, innovate
+          efficiently, and provide personalized attention to every project
+          we undertake.
+        </p>
+        <h3 class="fw-semibold">Why Us?</h3>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <strong>Tailored Solutions</strong> – Every business is
+            unique, and so are our solutions. We take the time to
+            understand your needs and craft custom software that fits your
+            goals.
+          </li>
+          <li class="mb-2">
+            <strong>End-to-End Expertise</strong> – From design to
+            deployment, we handle the entire development lifecycle,
+            ensuring high-quality results.
+          </li>
+          <li class="mb-2">
+            <strong>Reliable & Scalable Technology</strong> – We use
+            modern technologies and best practices to build scalable and
+            future-proof digital products.
+          </li>
+          <li>
+            <strong>Commitment to Excellence</strong> – Despite being a
+            small team, we deliver with the efficiency and expertise of a
+            large-scale company while maintaining a personalized approach.
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -112,11 +181,11 @@
 <section id="contact" class="py-5 bg-light" data-aos="fade-up">
   <div class="container" style="margin-bottom: 100px; margin-top: 100px;">
     <div class="text-center mb-4">
-      <h2>Contact Us</h2>
+      <h2 class="fw-bold">Contact Us</h2>
     </div>
     <div class="row">
       <div class="col-md-6 mb-4">
-        <h4>Company Message</h4>
+        <h4 class="fw-semibold">Company Message</h4>
         <p>We value your time and interest in our services.<br />Please feel free to reach out with any questions or requests.</p>
         <div class="d-flex flex-column gap-2 mt-3">
           <a href="mailto:info@company.com" class="d-flex align-items-center text-decoration-none text-dark">
@@ -128,32 +197,55 @@
             <span>+968 97760250</span>
           </a>
           <iframe
-                title="Company Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.215169885484!2d58.17897327478673!3d23.575560895467117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8de3a86ccefdd7%3A0x502673e3deffb381!2sHarjah%20for%20Software%20Development!5e1!3m2!1sen!2som!4v1742809788692!5m2!1sen!2som"
-                width="100%"
-                height="300"
-                style="border: 1px; border-style: solid; border-color: #ccc;"
-                allowFullScreen=""
-                loading="lazy"
-              >
-            </iframe>
+            title="Company Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.215169885484!2d58.17897327478673!3d23.575560895467117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8de3a86ccefdd7%3A0x502673e3deffb381!2sHarjah%20for%20Software%20Development!5e1!3m2!1sen!2som!4v1742809788692!5m2!1sen!2som"
+            width="100%"
+            height="300"
+            style="border: 1px solid #ccc;"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
         </div>
       </div>
       <div class="col-md-6">
         <form>
           <div class="mb-3">
-            <input type="text" class="form-control" placeholder="First Name" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="First Name"
+              aria-label="First Name"
+              required
+            />
           </div>
           <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Last Name" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Last Name"
+              aria-label="Last Name"
+              required
+            />
           </div>
           <div class="mb-3">
-            <input type="email" class="form-control" placeholder="Business Email" />
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Business Email"
+              aria-label="Business Email"
+              required
+            />
           </div>
           <div class="mb-3">
-            <textarea class="form-control" rows="4" placeholder="How can we help you?"></textarea>
+            <textarea
+              class="form-control"
+              rows="4"
+              placeholder="How can we help you?"
+              aria-label="Message"
+              required
+            ></textarea>
           </div>
-          <button type="submit" class="btn btn-primary w-100">Submit</button>
+          <button type="submit" class="btn btn-primary w-100 fw-bold">Submit</button>
         </form>
       </div>
     </div>
@@ -163,16 +255,27 @@
 <!-- FOOTER -->
 <footer class="bg-dark text-white pt-5">
   <div class="container text-center">
-    <img src="images/logo.svg" alt="Company Logo" style="max-width: 100px; margin-bottom: 20px;" class="mb-3" />
+    <img src="images/logo.svg" alt="Harjah Company Logo" style="max-width: 100px; margin-bottom: 20px;" class="mb-3" />
     <ul class="list-inline mb-4">
-      <li class="list-inline-item mx-2"><a href="https://facebook.com" target="_blank" class="text-white fs-5"><i class="fab fa-facebook-f"></i></a></li>
-      <li class="list-inline-item mx-2"><a href="https://x.com" target="_blank" class="text-white fs-5"><i class="fab fa-x-twitter"></i></a></li>
-      <li class="list-inline-item mx-2"><a href="https://linkedin.com" target="_blank" class="text-white fs-5"><i class="fab fa-linkedin-in"></i></a></li>
-      <li class="list-inline-item mx-2"><a href="https://plus.google.com" target="_blank" class="text-white fs-5"><i class="fab fa-google-plus-g"></i></a></li>
+      <li class="list-inline-item mx-2">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="text-white fs-5">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+      <li class="list-inline-item mx-2">
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="text-white fs-5">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+      </li>
+      <li class="list-inline-item mx-2">
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-white fs-5">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
     </ul>
     <hr class="border-light" />
     <div class="text-center py-2" style="font-size: 12px;">
-      © 2024 Copyright: 
+      © 2024 Copyright:
       <a href="https://harjah.com/" class="text-white text-decoration-underline">Harjah.com</a>
     </div>
   </div>
@@ -197,6 +300,113 @@
     backgroundColor: 0x29292f,
     THREE: THREE,
   });
+
+  const langToggleBtn = document.getElementById("langToggle");
+  langToggleBtn.addEventListener("click", () => {
+    const currentLang = document.documentElement.lang;
+    if (currentLang === "en") {
+      // Switch to Arabic
+      document.documentElement.lang = "ar";
+      document.body.dir = "rtl";
+      langToggleBtn.textContent = "English";
+
+      // Update text content to Arabic
+      document.querySelector(".navbar-brand").textContent = "هارجاه";
+      document.querySelector(".nav-link[href='#home']").textContent = "الرئيسية";
+      document.querySelector(".nav-link[href='#services']").textContent = "الخدمات";
+      document.querySelector(".nav-link[href='#about']").textContent = "معلومات عنا";
+      document.querySelector(".btn[href='#contact']").textContent = "اتصل بنا";
+      document.querySelector("#home h1").textContent = "مرحبًا بكم في هارجاه";
+      document.querySelector("#home p").textContent = "نقدم حلولاً مبتكرة لاحتياجات عملك";
+      document.querySelector("#services h2").textContent = "خدماتنا";
+
+      // Update "Services" section
+      const serviceTitles = document.querySelectorAll("#services h3");
+      serviceTitles[0].innerHTML = "تطوير <br/> المواقع";
+      serviceTitles[1].innerHTML = "تطوير <br/> التطبيقات";
+      serviceTitles[2].innerHTML = "تصميم <br/> واجهات المستخدم";
+
+      const serviceDescriptions = document.querySelectorAll("#services .service-description p");
+      serviceDescriptions[0].textContent = "ارتقِ بعلامتك التجارية من خلال مواقع وتطبيقات ويب عالية الأداء وقابلة للتطوير.";
+      serviceDescriptions[1].textContent = "عزز عملك بتطبيقات جوال أنيقة وعالية الأداء لنظامي iOS و Android.";
+      serviceDescriptions[2].textContent = "أبهر جمهورك بتصاميم مذهلة تركز على المستخدم.";
+
+      const serviceButtons = document.querySelectorAll("#services .service-description button");
+      serviceButtons.forEach(button => button.textContent = "اقرأ المزيد");
+
+      // Update "About Us" section
+      document.querySelector("#about h2").textContent = "معلومات عنا";
+      const aboutHeadings = document.querySelectorAll("#about h3");
+      aboutHeadings[0].textContent = "خلفية الشركة";
+      aboutHeadings[1].textContent = "رؤيتنا";
+      aboutHeadings[2].textContent = "الفريق";
+      aboutHeadings[3].textContent = "لماذا نحن؟";
+
+      const aboutParagraphs = document.querySelectorAll("#about p");
+      aboutParagraphs[0].textContent = "تأسست هارجاه في قلب مسقط، وهي شركة تطوير برمجيات ديناميكية مدفوعة بشغف التكنولوجيا والابتكار.";
+      aboutParagraphs[1].textContent = "تم إنشاؤها برؤية تحويل الأعمال من خلال الحلول الرقمية، نحن متخصصون في إنشاء مواقع ويب وتطبيقات جوال وخدمات تقنية معلومات متطورة تلبي متطلبات السوق الحديثة.";
+      aboutParagraphs[2].textContent = "تمتد خبرتنا عبر مختلف الصناعات، مما يساعد الشركات الناشئة والمؤسسات والأفراد على بناء تجارب رقمية قابلة للتطوير وآمنة وسهلة الاستخدام.";
+      aboutParagraphs[3].textContent = "في هارجاه، نؤمن بأن التكنولوجيا يجب أن تكون وسيلة تمكين وليست عائقًا. رؤيتنا هي تمكين الشركات من التحول الرقمي السلس من خلال التصميم البديهي والتطوير القوي والاستشارات التقنية الاستراتيجية. نسعى لسد الفجوة بين الأفكار والتنفيذ، مما يضمن أن كل حل نقدمه يحقق نموًا وكفاءة قابلة للقياس.";
+      aboutParagraphs[4].textContent = "نحن فريق صغير ولكن قوي مكون من شخصين - ماهرين وشغوفين ومكرسين لبناء حلول رقمية مؤثرة. بمزيج من الإبداع والخبرة التقنية ومهارات حل المشكلات، نعمل عن كثب مع العملاء لتحويل رؤاهم إلى واقع. تتيح لنا مرونتنا التكيف بسرعة والابتكار بكفاءة وتقديم اهتمام شخصي لكل مشروع نقوم به.";
+
+      const aboutListItems = document.querySelectorAll("#about ul li");
+      aboutListItems[0].innerHTML = "<strong>حلول مخصصة</strong> – كل عمل فريد من نوعه، وكذلك حلولنا. نأخذ الوقت لفهم احتياجاتك ونصمم برامج مخصصة تناسب أهدافك.";
+      aboutListItems[1].innerHTML = "<strong>خبرة شاملة</strong> – من التصميم إلى النشر، نتولى دورة التطوير الكاملة، مما يضمن نتائج عالية الجودة.";
+      aboutListItems[2].innerHTML = "<strong>تقنية موثوقة وقابلة للتطوير</strong> – نستخدم تقنيات حديثة وأفضل الممارسات لبناء منتجات رقمية قابلة للتطوير ومستقبلية.";
+      aboutListItems[3].innerHTML = "<strong>التزام بالتميز</strong> – على الرغم من كوننا فريقًا صغيرًا، فإننا نقدم بكفاءة وخبرة شركة كبيرة مع الحفاظ على نهج شخصي.";
+    } else {
+      // Switch to English
+      document.documentElement.lang = "en";
+      document.body.dir = "ltr";
+      langToggleBtn.textContent = "عربي";
+
+      // Update text content to English
+      document.querySelector(".navbar-brand").textContent = "Harjah";
+      document.querySelector(".nav-link[href='#home']").textContent = "Home";
+      document.querySelector(".nav-link[href='#services']").textContent = "Services";
+      document.querySelector(".nav-link[href='#about']").textContent = "About Us";
+      document.querySelector(".btn[href='#contact']").textContent = "Contact Us";
+      document.querySelector("#home h1").textContent = "Welcome to Harjah";
+      document.querySelector("#home p").textContent = "We provide innovative solutions for your business needs";
+      document.querySelector("#services h2").textContent = "Our Services";
+
+      // Update "Services" section
+      const serviceTitles = document.querySelectorAll("#services h3");
+      serviceTitles[0].innerHTML = "Web <br/> Development";
+      serviceTitles[1].innerHTML = "Mobile <br/> Development";
+      serviceTitles[2].innerHTML = "UI <br/> Design";
+
+      const serviceDescriptions = document.querySelectorAll("#services .service-description p");
+      serviceDescriptions[0].textContent = "Elevate your brand with high-performance, scalable websites and web applications.";
+      serviceDescriptions[1].textContent = "Power up your business with sleek, high-performing mobile apps for iOS and Android.";
+      serviceDescriptions[2].textContent = "Captivate your audience with stunning, user-centric designs.";
+
+      const serviceButtons = document.querySelectorAll("#services .service-description button");
+      serviceButtons.forEach(button => button.textContent = "Read More");
+
+      // Update "About Us" section
+      document.querySelector("#about h2").textContent = "About Us";
+      const aboutHeadings = document.querySelectorAll("#about h3");
+      aboutHeadings[0].textContent = "Company Background";
+      aboutHeadings[1].textContent = "Our Vision";
+      aboutHeadings[2].textContent = "Team";
+      aboutHeadings[3].textContent = "Why Us?";
+
+      const aboutParagraphs = document.querySelectorAll("#about p");
+      aboutParagraphs[0].textContent = "Founded in the heart of Muscat, Harjah is a dynamic software development company driven by a passion for technology and innovation.";
+      aboutParagraphs[1].textContent = "Established with the vision of transforming businesses through digital solutions, we specialize in crafting cutting-edge websites, mobile applications, and IT services tailored to meet modern market demands.";
+      aboutParagraphs[2].textContent = "Our expertise spans across various industries, helping startups, enterprises, and individuals build digital experiences that are scalable, secure, and user-friendly.";
+      aboutParagraphs[3].textContent = "At Harjah, we believe technology should be an enabler, not a barrier. Our vision is to empower businesses with seamless digital transformation through intuitive design, robust development, and strategic IT consulting. We strive to bridge the gap between ideas and execution, ensuring that every solution we deliver drives measurable growth and efficiency.";
+      aboutParagraphs[4].textContent = "We are a small but mighty team of two—skilled, passionate, and committed to building impactful digital solutions. With a blend of creativity, technical expertise, and problem-solving skills, we work closely with clients to transform their visions into reality. Our agility allows us to adapt quickly, innovate efficiently, and provide personalized attention to every project we undertake.";
+
+      const aboutListItems = document.querySelectorAll("#about ul li");
+      aboutListItems[0].innerHTML = "<strong>Tailored Solutions</strong> – Every business is unique, and so are our solutions. We take the time to understand your needs and craft custom software that fits your goals.";
+      aboutListItems[1].innerHTML = "<strong>End-to-End Expertise</strong> – From design to deployment, we handle the entire development lifecycle, ensuring high-quality results.";
+      aboutListItems[2].innerHTML = "<strong>Reliable & Scalable Technology</strong> – We use modern technologies and best practices to build scalable and future-proof digital products.";
+      aboutListItems[3].innerHTML = "<strong>Commitment to Excellence</strong> – Despite being a small team, we deliver with the efficiency and expertise of a large-scale company while maintaining a personalized approach.";
+    }
+  });
+  
 </script>
 </body>
 </html>
