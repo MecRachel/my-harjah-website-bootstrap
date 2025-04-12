@@ -8,6 +8,9 @@
   <meta name="author" content="Harjah" />
   <title>Harjah - Solutions for Your Business</title>
 
+  
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+
   <!-- Three.js and Vanta.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
@@ -16,7 +19,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
@@ -30,27 +33,33 @@
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg fixed-top shadow-sm" style="background-color: #006d77;">
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm"
+     style="background: linear-gradient(to right, #48cae4, #006d77)" 
+     data-aos="fade-down" 
+     data-aos-duration="1000" 
+     data-aos-easing="ease-in-out">
   <div class="container">
-    <a class="navbar-brand fw-bold text-white" href="#">Harjah</a>
+    <a class="navbar-brand fw-bold text-white" href="#" 
+       data-aos="fade-down" 
+       data-aos-delay="100">Harjah</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse show" id="navbarNav">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex gap-3">
-        <li class="nav-item">
+        <li class="nav-item" data-aos="fade-down" data-aos-delay="200">
           <a class="nav-link active text-white" href="#home">Home</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
           <a class="nav-link text-white" href="#services">Services</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" data-aos="fade-down" data-aos-delay="400">
           <a class="nav-link text-white" href="#about">About Us</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" data-aos="fade-down" data-aos-delay="500">
           <a class="btn btn-light text-white px-3 py-1 ms-2" href="#contact">Contact Us</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" data-aos="fade-down" data-aos-delay="600">
           <button id="langToggle" class="btn btn-outline-light px-3 py-1 ms-2 text-white">عربي</button>
         </li>
       </ul>
@@ -97,7 +106,7 @@
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="py-5 text-center bg-light">
+<section id="services" class="py-5 text-center" style="background-color: #f8f9fa;">
   <div class="container" style="margin-bottom: 100px; margin-top: 100px;">
     <h2 class="mb-5 fw-bold">Our Services</h2>
     <div class="row g-4 justify-content-center">
@@ -138,70 +147,92 @@
 <!-- About Us Section -->
 <section id="about" class="py-5 bg-light" data-aos="fade-up">
   <div class="container">
-    <h2 class="text-center mb-4 fw-bold">About Us</h2>
-    <div class="row">
-      <div class="col-md-12">
-        <h3 class="fw-semibold">Company Background</h3>
-        <p>
-          Founded in the heart of Muscat, Harjah is a dynamic software
-          development company driven by a passion for technology and
-          innovation.
-        </p>
-        <p>
-          Established with the vision of transforming businesses through
-          digital solutions, we specialize in crafting cutting-edge
-          websites, mobile applications, and IT services tailored to meet
-          modern market demands.
-        </p>
-        <p>
-          Our expertise spans across various industries, helping startups,
-          enterprises, and individuals build digital experiences that are
-          scalable, secure, and user-friendly.
-        </p>
-        <h3 class="fw-semibold">Our Vision</h3>
-        <p>
-          At Harjah, we believe technology should be an enabler, not a
-          barrier. Our vision is to empower businesses with seamless
-          digital transformation through intuitive design, robust
-          development, and strategic IT consulting. We strive to bridge
-          the gap between ideas and execution, ensuring that every
-          solution we deliver drives measurable growth and efficiency.
-        </p>
-        <h3 class="fw-semibold">Team</h3>
-        <p>
-          We are a small but mighty team of two—skilled, passionate, and
-          committed to building impactful digital solutions. With a blend
-          of creativity, technical expertise, and problem-solving skills,
-          we work closely with clients to transform their visions into
-          reality. Our agility allows us to adapt quickly, innovate
-          efficiently, and provide personalized attention to every project
-          we undertake.
-        </p>
-        <h3 class="fw-semibold">Why Us?</h3>
-        <ul class="list-unstyled">
-          <li class="mb-2">
-            <strong>Tailored Solutions</strong> – Every business is
-            unique, and so are our solutions. We take the time to
-            understand your needs and craft custom software that fits your
-            goals.
-          </li>
-          <li class="mb-2">
-            <strong>End-to-End Expertise</strong> – From design to
-            deployment, we handle the entire development lifecycle,
-            ensuring high-quality results.
-          </li>
-          <li class="mb-2">
-            <strong>Reliable & Scalable Technology</strong> – We use
-            modern technologies and best practices to build scalable and
-            future-proof digital products.
-          </li>
-          <li>
-            <strong>Commitment to Excellence</strong> – Despite being a
-            small team, we deliver with the efficiency and expertise of a
-            large-scale company while maintaining a personalized approach.
-          </li>
-        </ul>
+    <!-- Section Title -->
+    <h2 class="text-center mb-2 fw-bold">About Us</h2>
+    <p class="text-center text-muted mb-5">Building digital experiences that matter.</p>
+
+    <!-- Company Background with Image -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="images/Company.png" alt="Harjah Office" class="img-fluid rounded shadow" />
       </div>
+      <div class="col-md-6">
+        <h3 class="fw-semibold">Company Background</h3>
+        <p>Founded in the heart of Muscat, Harjah is a dynamic software development company driven by a passion for technology and innovation.</p>
+        <p>We specialize in crafting cutting-edge websites, mobile applications, and IT services tailored to meet modern market demands. Our solutions are scalable, secure, and user-friendly, designed for startups, enterprises, and individual clients across various industries.</p>
+      </div>
+    </div>
+
+    <!-- Vision Statement -->
+    <div class="bg-white p-4 rounded shadow-sm mb-5">
+      <h3 class="fw-semibold">Our Vision</h3>
+      <p class="fst-italic text-muted">"Empowering businesses with seamless digital transformation through intuitive design, robust development, and strategic IT consulting."</p>
+      <p>We believe technology should be an enabler, not a barrier. Our goal is to bridge the gap between ideas and execution—ensuring that every solution we deliver drives measurable growth and operational efficiency.</p>
+    </div>
+
+    <!-- Team Section -->
+    <div class="mb-5">
+      <h3 class="fw-semibold text-center mb-4">Meet the Team</h3>
+      <div class="row text-center">
+        <div class="col-md-6 mb-4">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="images/team1.jpg" class="card-img-top" alt="Team Member 1">
+            <div class="card-body">
+              <h5 class="card-title">Ali Al Harthi</h5>
+              <p class="text-muted">Co-Founder</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="images/team2.jpg" class="card-img-top" alt="Team Member 2">
+            <div class="card-body">
+              <h5 class="card-title">Alhusain Al Harthi</h5>
+              <p class="text-muted">Team Member</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <div>
+      <h3 class="fw-semibold text-center mb-4">Why Choose Us?</h3>
+      <div class="row">
+        <div class="col-md-6 mb-4 d-flex align-items-start">
+          <i class="bi bi-lightbulb-fill text-primary fs-3 me-3"></i>
+          <div>
+            <h6 class="fw-bold mb-1">Tailored Solutions</h6>
+            <p class="mb-0 text-muted">Every business is unique. We take time to understand your needs and build custom solutions that meet your goals.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4 d-flex align-items-start">
+          <i class="bi bi-layers-fill text-primary fs-3 me-3"></i>
+          <div>
+            <h6 class="fw-bold mb-1">End-to-End Expertise</h6>
+            <p class="mb-0 text-muted">From design to deployment, we manage the full development cycle with precision and care.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4 d-flex align-items-start">
+          <i class="bi bi-cloud-check-fill text-primary fs-3 me-3"></i>
+          <div>
+            <h6 class="fw-bold mb-1">Reliable & Scalable Tech</h6>
+            <p class="mb-0 text-muted">We use modern frameworks and best practices to ensure your product is secure, scalable, and future-proof.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4 d-flex align-items-start">
+          <i class="bi bi-award-fill text-primary fs-3 me-3"></i>
+          <div>
+            <h6 class="fw-bold mb-1">Commitment to Excellence</h6>
+            <p class="mb-0 text-muted">We bring the efficiency of a large firm with the personal touch of a dedicated team.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="text-center mt-5">
+      <a href="#contact" class="btn btn-primary btn-lg px-4">Let’s Build Something Together</a>
     </div>
   </div>
 </section>
@@ -330,6 +361,15 @@
     THREE: THREE,
   });
 
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+  
   const langToggleBtn = document.getElementById("langToggle");
   langToggleBtn.addEventListener("click", () => {
     const currentLang = document.documentElement.lang;
