@@ -2,7 +2,7 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   scroll-behavior: smooth;
-  padding-top: 80px; /* Pushes content down below navbar */
+  padding-top: 0; /* Pushes content down below navbar */
 }
 
 section {
@@ -21,14 +21,35 @@ h1, h2 {
 .navbar .btn {
   border-radius: 20px;
   font-weight: 600;
-  background-color: #0d6efd;
+  background-color: #34495e;
   color: white;
   transition: background-color 0.3s ease;
 }
 
 .navbar .btn:hover {
-  background-color: #0b5ed7;
-  color: white;
+  background-color: #e55050;
+}
+
+/* Home Section */
+#home {
+  height: 100vh; /* Full viewport height */
+  position: relative;
+  overflow: hidden;
+}
+
+#home .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Black transparent overlay */
+  z-index: 1;
+}
+
+#home .text-center {
+  position: relative;
+  z-index: 2; /* Ensures content is above the overlay */
 }
 
 /* === Services Section === */
