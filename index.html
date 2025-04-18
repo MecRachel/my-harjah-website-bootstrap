@@ -106,37 +106,37 @@
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="py-5 text-center" style="background-color: #f8f9fa;">
-  <div class="container" style="margin-bottom: 100px; margin-top: 100px;">
+<section id="services" class="py-5 text-center" style="background-color: #f8f9fa;" data-aos="fade-up">
+  <div class="container" style="margin-bottom: 100px; margin-top: 40px;">
     <h2 class="mb-5 fw-bold">Our Services</h2>
     <div class="row g-4 justify-content-center">
       <div class="col-md-4">
         <div class="service-wrapper position-relative overflow-hidden border rounded shadow p-3 bg-white">
-          <img src="images/webDev.gif" alt="Web Development Service" class="img-fluid mb-3" style="width: 120px; height: 140px; margin-bottom: 30px;">
+          <img src="images/webDev.gif" alt="Illustration of Web Development Service" class="img-fluid mb-3" style="width: 120px; height: 140px; margin-bottom: 30px;" loading="lazy">
           <h3 class="fw-semibold">Web <br/> Development</h3>
           <div class="service-description position-absolute top-0 start-0 w-100 h-100 bg-white d-flex flex-column justify-content-center align-items-center text-center p-3">
             <p>Elevate your brand with high-performance, scalable websites and web applications.</p>
-            <button class="btn btn-outline-primary mt-2">Read More</button>
+            <button class="btn btn-outline-primary mt-2" aria-label="Read more about Web Development">Read More</button>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="service-wrapper position-relative overflow-hidden border rounded shadow p-3 bg-white">
-          <img src="images/mobileDev.gif" alt="Mobile Development Service" class="img-fluid mb-3" style="width: 120px; height: 140px; margin-bottom: 30px;">
+          <img src="images/mobileDev.gif" alt="Illustration of Mobile Development Service" class="img-fluid mb-3" style="width: 120px; height: 140px; margin-bottom: 30px;" loading="lazy">
           <h3 class="fw-semibold">Mobile <br/> Development</h3>
           <div class="service-description position-absolute top-0 start-0 w-100 h-100 bg-white d-flex flex-column justify-content-center align-items-center text-center p-3">
             <p>Power up your business with sleek, high-performing mobile apps for iOS and Android.</p>
-            <button class="btn btn-outline-primary mt-2">Read More</button>
+            <button class="btn btn-outline-primary mt-2" aria-label="Read more about Mobile Development">Read More</button>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="service-wrapper position-relative overflow-hidden border rounded shadow p-3 bg-white">
-          <img src="images/UI_design.gif" alt="UI Design Service" class="img-fluid mb-3" style="width: 120px; height: 140px; margin-bottom: 30px;">
+          <img src="images/UI_design.gif" alt="Illustration of UI Design Service" class="img-fluid mb-3" style="width: 120px; height: 140px; margin-bottom: 30px;" loading="lazy">
           <h3 class="fw-semibold">UI <br/> Design</h3>
           <div class="service-description position-absolute top-0 start-0 w-100 h-100 bg-white d-flex flex-column justify-content-center align-items-center text-center p-3">
             <p>Captivate your audience with stunning, user-centric designs.</p>
-            <button class="btn btn-outline-primary mt-2">Read More</button>
+            <button class="btn btn-outline-primary mt-2" aria-label="Read more about UI Design">Read More</button>
           </div>
         </div>
       </div>
@@ -145,50 +145,74 @@
 </section>
 
 <!-- About Us Section -->
-<section id="about" class="py-5 bg-light" data-aos="fade-up">
+<section id="about" class="py-5 about-section" data-aos="fade-up">
   <div class="container">
     <!-- Section Title -->
     <h2 class="text-center mb-2 fw-bold">About Us</h2>
     <p class="text-center text-muted mb-5">Building digital experiences that matter.</p>
 
-    <!-- Company Background with Image -->
-    <div class="row align-items-center mb-5">
-      <div class="col-md-6 mb-4 mb-md-0">
-        <img src="images/Company.png" alt="Harjah Office" class="img-fluid rounded shadow" />
+ <!-- Company Background Section -->
+<div class="row align-items-center mb-5" data-aos="fade-up">
+  <!-- Image on the Left (desktop), Top (mobile) -->
+  <div class="col-md-6 mb-4 mb-md-0 order-1 order-md-0">
+    <img src="images/Company.png" alt="Harjah Office" class="img-fluid rounded shadow" />
+  </div>
+
+  <!-- Text on the Right (desktop), Bottom (mobile) -->
+  <div class="col-md-6 order-0 order-md-1">
+    <div class="about-box">
+      <div class="d-flex align-items-start mb-3">
+        <i class="bi bi-building fs-2 me-3"></i>
+        <div>
+          <h3 class="fw-semibold mb-1">Company Background</h3>
+        </div>
       </div>
-      <div class="col-md-6">
-        <h3 class="fw-semibold">Company Background</h3>
-        <p>Founded in the heart of Muscat, Harjah is a dynamic software development company driven by a passion for technology and innovation.</p>
-        <p>We specialize in crafting cutting-edge websites, mobile applications, and IT services tailored to meet modern market demands. Our solutions are scalable, secure, and user-friendly, designed for startups, enterprises, and individual clients across various industries.</p>
-      </div>
+      <p class="text-secondary mb-2">
+        Founded in the heart of Muscat, Harjah is a dynamic software development company driven by a passion for technology and innovation.
+      </p>
+      <p class="text-secondary mb-0">
+        We specialize in crafting cutting-edge websites, mobile applications, and IT services tailored to meet modern market demands. Our solutions are scalable, secure, and user-friendly—designed for startups, enterprises, and individual clients across various industries.
+      </p>
     </div>
+  </div>
+</div>
 
     <!-- Vision Statement -->
-    <div class="bg-white p-4 rounded shadow-sm mb-5">
-      <h3 class="fw-semibold">Our Vision</h3>
-      <p class="fst-italic text-muted">"Empowering businesses with seamless digital transformation through intuitive design, robust development, and strategic IT consulting."</p>
-      <p>We believe technology should be an enabler, not a barrier. Our goal is to bridge the gap between ideas and execution—ensuring that every solution we deliver drives measurable growth and operational efficiency.</p>
+    <div class="about-box mb-5" data-aos="fade-up">
+      <div class="d-flex align-items-start mb-3">
+        <i class="bi bi-eye-fill fs-2 me-3"></i>
+        <div>
+          <h3 class="fw-semibold mb-1">Our Vision</h3>
+          <p class="fst-italic text-muted mb-0">"Empowering businesses with seamless digital transformation through intuitive design, robust development, and strategic IT consulting."</p>
+        </div>
+      </div>
+      <p class="text-secondary mt-3">
+        We believe technology should be an enabler, not a barrier. Our goal is to bridge the gap between ideas and execution—ensuring that every solution we deliver drives measurable growth and operational efficiency.
+      </p>
     </div>
 
     <!-- Team Section -->
-    <div class="mb-5">
+    <div class="mb-5" data-aos="fade-up">
       <h3 class="fw-semibold text-center mb-4">Meet the Team</h3>
-      <div class="row text-center">
+      <div class="row justify-content-center">
+        <!-- Team Member 1 -->
         <div class="col-md-6 mb-4">
-          <div class="card border-0 shadow-sm h-100">
-            <img src="images/team1.jpg" class="card-img-top" alt="Team Member 1">
-            <div class="card-body">
-              <h5 class="card-title">Ali Al Harthi</h5>
-              <p class="text-muted">Co-Founder</p>
+          <div class="team-card d-flex align-items-center h-100">
+            <img src="images/team1.jpg" alt="Ali Al Harthi" class="card-img-top" />
+            <div class="ms-4">
+              <h5 class="mb-1 fw-semibold">Ali Al Harthi</h5>
+              <p class="mb-0 text-muted">Co-Founder</p>
             </div>
           </div>
         </div>
+
+        <!-- Team Member 2 -->
         <div class="col-md-6 mb-4">
-          <div class="card border-0 shadow-sm h-100">
-            <img src="images/team2.jpg" class="card-img-top" alt="Team Member 2">
-            <div class="card-body">
-              <h5 class="card-title">Alhusain Al Harthi</h5>
-              <p class="text-muted">Team Member</p>
+          <div class="team-card d-flex align-items-center h-100">
+            <img src="images/team2.jpg" alt="Alhusain Al Harthi" class="card-img-top" />
+            <div class="ms-4">
+              <h5 class="mb-1 fw-semibold">Alhusain Al Harthi</h5>
+              <p class="mb-0 text-muted">Team Member</p>
             </div>
           </div>
         </div>
@@ -196,58 +220,71 @@
     </div>
 
     <!-- Why Choose Us Section -->
-    <div>
+    <div data-aos="fade-up">
       <h3 class="fw-semibold text-center mb-4">Why Choose Us?</h3>
       <div class="row">
-        <div class="col-md-6 mb-4 d-flex align-items-start">
-          <i class="bi bi-lightbulb-fill text-primary fs-3 me-3"></i>
-          <div>
-            <h6 class="fw-bold mb-1">Tailored Solutions</h6>
-            <p class="mb-0 text-muted">Every business is unique. We take time to understand your needs and build custom solutions that meet your goals.</p>
+        <!-- Feature 1 -->
+        <div class="col-md-6 mb-4">
+          <div class="about-box h-100 d-flex">
+            <i class="bi bi-lightbulb-fill fs-3 me-3"></i>
+            <div>
+              <h6 class="fw-bold mb-1">Tailored Solutions</h6>
+              <p class="text-secondary mb-0">Every business is unique. We take time to understand your needs and build custom solutions that meet your goals.</p>
+            </div>
           </div>
         </div>
-        <div class="col-md-6 mb-4 d-flex align-items-start">
-          <i class="bi bi-layers-fill text-primary fs-3 me-3"></i>
-          <div>
-            <h6 class="fw-bold mb-1">End-to-End Expertise</h6>
-            <p class="mb-0 text-muted">From design to deployment, we manage the full development cycle with precision and care.</p>
+
+        <!-- Feature 2 -->
+        <div class="col-md-6 mb-4">
+          <div class="about-box h-100 d-flex">
+            <i class="bi bi-layers-fill fs-3 me-3"></i>
+            <div>
+              <h6 class="fw-bold mb-1">End-to-End Expertise</h6>
+              <p class="text-secondary mb-0">From design to deployment, we manage the full development cycle with precision and care.</p>
+            </div>
           </div>
         </div>
-        <div class="col-md-6 mb-4 d-flex align-items-start">
-          <i class="bi bi-cloud-check-fill text-primary fs-3 me-3"></i>
-          <div>
-            <h6 class="fw-bold mb-1">Reliable & Scalable Tech</h6>
-            <p class="mb-0 text-muted">We use modern frameworks and best practices to ensure your product is secure, scalable, and future-proof.</p>
+
+        <!-- Feature 3 -->
+        <div class="col-md-6 mb-4">
+          <div class="about-box h-100 d-flex">
+            <i class="bi bi-cloud-check-fill fs-3 me-3"></i>
+            <div>
+              <h6 class="fw-bold mb-1">Reliable & Scalable Tech</h6>
+              <p class="text-secondary mb-0">We use modern frameworks and best practices to ensure your product is secure, scalable, and future-proof.</p>
+            </div>
           </div>
         </div>
-        <div class="col-md-6 mb-4 d-flex align-items-start">
-          <i class="bi bi-award-fill text-primary fs-3 me-3"></i>
-          <div>
-            <h6 class="fw-bold mb-1">Commitment to Excellence</h6>
-            <p class="mb-0 text-muted">We bring the efficiency of a large firm with the personal touch of a dedicated team.</p>
+
+        <!-- Feature 4 -->
+        <div class="col-md-6 mb-4">
+          <div class="about-box h-100 d-flex">
+            <i class="bi bi-award-fill fs-3 me-3"></i>
+            <div>
+              <h6 class="fw-bold mb-1">Commitment to Excellence</h6>
+              <p class="text-secondary mb-0">We bring the efficiency of a large firm with the personal touch of a dedicated team.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Call to Action -->
-    <div class="text-center mt-5">
-      <a href="#contact" class="btn btn-primary btn-lg px-4">Let’s Build Something Together</a>
-    </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="py-5 bg-light" data-aos="fade-up">
-  <div class="container" style="margin-bottom: 100px; margin-top: 100px;">
+<!-- Contact Us Section -->
+<section id="contact" class="py-5 contact-section" data-aos="fade-up">
+  <div class="container">
     <div class="text-center mb-4">
-      <h2 class="fw-bold">Contact Us</h2>
+      <h2 class="fw-bold" style="color: #000;">Contact Us</h2>
+      <p class="text-muted">We value your time and interest in our services. Feel free to reach out with any questions or requests.</p>
     </div>
     <div class="row">
+
+      <!-- Left Column: Contact Information -->
       <div class="col-md-6 mb-4">
-        <h4 class="fw-semibold">Company Message</h4>
-        <p>We value your time and interest in our services.<br />Please feel free to reach out with any questions or requests.</p>
-        <div class="d-flex flex-column gap-2 mt-3">
+        <h4 class="fw-semibold text-dark">Get in Touch</h4>
+        <p class="text-muted">We are here to help you with your business needs. Reach out to us via email or phone.</p>
+        <div class="d-flex flex-column gap-3 mt-3">
           <a href="mailto:info@company.com" class="d-flex align-items-center text-decoration-none text-dark">
             <i class="bi bi-envelope-fill me-2 text-primary"></i>
             <span>info@company.com</span>
@@ -261,12 +298,14 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.215169885484!2d58.17897327478673!3d23.575560895467117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8de3a86ccefdd7%3A0x502673e3deffb381!2sHarjah%20for%20Software%20Development!5e1!3m2!1sen!2som!4v1742809788692!5m2!1sen!2som"
             width="100%"
             height="300"
-            style="border: 1px solid #ccc;"
+            style="border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);"
             allowfullscreen=""
             loading="lazy"
           ></iframe>
         </div>
       </div>
+
+      <!-- Right Column: Contact Form -->
       <div class="col-md-6">
         <form>
           <div class="mb-3">
@@ -361,15 +400,23 @@
     THREE: THREE,
   });
 
-  window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
+    // Smooth scrolling with offset for fixed navbar
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      const offset = 80; // Adjust this value based on your navbar height
+      const elementPosition = targetElement.offsetTop;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    });
   });
-  
+
   const langToggleBtn = document.getElementById("langToggle");
   langToggleBtn.addEventListener("click", () => {
     const currentLang = document.documentElement.lang;
