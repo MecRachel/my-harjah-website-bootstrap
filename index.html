@@ -121,132 +121,157 @@
       </div>
     </nav>
 
-    <!-- HOME SECTION -->
-    <section
-      id="home"
-      class="text-white d-flex align-items-center justify-content-center"
-      style="height: 100vh; position: relative; overflow: hidden"
-    >
-      <!-- Vanta Background -->
-      <div
-        id="vanta-home"
-        style="
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: 0;
-        "
-      ></div>
+<!-- HOME SECTION -->
+<section
+  id="home"
+  class="text-white d-flex align-items-center justify-content-center flex-column"
+  style="height: 100vh; position: relative; overflow: hidden"
+>
+  <!-- Vanta Background -->
+  <div
+    id="vanta-home"
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    "
+  ></div>
 
-      <!-- Background Image -->
+  <!-- Background Image -->
+  <div
+    style="
+      background-image: url('images/hero-background.jpg');
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    "
+  ></div>
+
+  <!-- Transparent Overlay -->
+  <div
+  class="overlay"
+  style="
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Adjust opacity as needed */
+    z-index: 1;
+  "
+></div>
+
+  <!-- Foreground Typing Animation Content -->
+  <div class="content-wrapper p-4 rounded-4 shadow-lg" data-aos="zoom-in" data-aos-delay="300" style="
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    max-width: 650px;
+    z-index: 2;
+    text-align: center;
+  ">
+    <h1 class="display-4 fw-bold text-white">
+      We build <span id="typed-text" class="text-info"></span>
+    </h1>
+    <p class="lead text-light mb-4">
+      Innovative tech crafted to elevate your business performance.
+    </p>
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+      <!-- WhatsApp Button -->
+      <a href="https://wa.me/971501234567" target="_blank" class="btn btn-outline-light btn-lg px-4">
+        <i class="bi bi-whatsapp me-2"></i>Book a Free Consultation
+      </a>
+
+<!-- Tech Stack Button -->
+<button
+  class="btn btn-lg px-4"
+  id="techStackToggle"
+  style="
+    background: linear-gradient(135deg, #007b9d, #92fe9d);
+    color: white;
+    border: none;
+  "
+>
+  <i class="bi bi-code-slash me-2"></i>Explore Technologies
+</button>
+</div>
+</div>
+
+<div id="techPopup" class="tech-popup shadow-lg p-3 rounded-4 text-white" style="display: none;">
+  <button id="closeTechPopup" class="btn-close btn-close-white" aria-label="Close" style="position: absolute; top: 10px; right: 10px;"></button>
+  <h6 class="mb-3">Technologies We Use</h6>
+  <div class="d-flex flex-wrap gap-4 justify-content-center">
+    <img src="images/html5.png" alt="HTML5" class="tech-icon" />
+    <img src="images/Python.png" alt="Python" class="tech-icon" />
+    <img src="images/java.png" alt="Java" class="tech-icon" />
+    <img src="images/React.webp" alt="React" class="tech-icon" />
+    <img src="images/node-js.png" alt="Node.js" class="tech-icon" />
+    <img src="images/firebase.png" alt="Firebase" class="tech-icon" />
+    <img src="images/mysql.png" alt="MySQL" class="tech-icon" />
+  </div>
+</div>
+
+  <!-- Background Slider -->
+  <div
+    id="backgroundSlider"
+    class="carousel slide carousel-fade"
+    data-bs-ride="carousel"
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    "
+  >
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#backgroundSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#backgroundSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#backgroundSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <!-- Carousel Inner -->
+    <div class="carousel-inner" style="height: 100%">
       <div
+        class="carousel-item active"
         style="
-          background-image: url('images/hero-background.jpg');
+          background-image: url('images/image1.jpg');
+          height: 100%;
           background-size: cover;
           background-position: center;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: 0;
         "
       ></div>
-
-      <!-- Transparent Overlay -->
       <div
-        class="overlay"
+        class="carousel-item"
         style="
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
+          background-image: url('images/image2.jpg');
           height: 100%;
-          background-color: rgba(0, 0, 0, 0.6);
-          z-index: 1;
+          background-size: cover;
+          background-position: center;
         "
       ></div>
-
-      <!-- Foreground Content -->
-      <div class="text-center px-3" style="position: relative; z-index: 2">
-        <h1 class="display-4 fw-bold">Welcome to Harjah</h1>
-        <p class="lead">
-          We provide innovative solutions for your business needs
-        </p>
-      </div>
-
-      <!-- Background Slider -->
       <div
-        id="backgroundSlider"
-        class="carousel slide carousel-fade"
-        data-bs-ride="carousel"
+        class="carousel-item"
         style="
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
+          background-image: url('images/image3.jpg');
           height: 100%;
-          z-index: 0;
+          background-size: cover;
+          background-position: center;
         "
-      >
-        <!-- Indicators (Dots) -->
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#backgroundSlider"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#backgroundSlider"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#backgroundSlider"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-
-        <!-- Carousel Inner -->
-        <div class="carousel-inner" style="height: 100%">
-          <div
-            class="carousel-item active"
-            style="
-              background-image: url('images/image1.jpg');
-              height: 100%;
-              background-size: cover;
-              background-position: center;
-            "
-          ></div>
-          <div
-            class="carousel-item"
-            style="
-              background-image: url('images/image2.jpg');
-              height: 100%;
-              background-size: cover;
-              background-position: center;
-            "
-          ></div>
-          <div
-            class="carousel-item"
-            style="
-              background-image: url('images/image3.jpg');
-              height: 100%;
-              background-size: cover;
-              background-position: center;
-            "
-          ></div>
-        </div>
-      </div>
-    </section>
+      ></div>
+    </div>
+  </div>
+</section>
 
     <!-- SERVICES -->
     <section
@@ -517,102 +542,59 @@
       </div>
     </section>
 
-    <!-- Contact Us Section -->
-    <section id="contact" class="py-5 contact-section" data-aos="fade-up">
-      <div class="container">
-        <div class="text-center mb-4">
-          <h2 class="fw-bold" style="color: #000">Contact Us</h2>
-          <p class="text-muted">
-            We value your time and interest in our services. Feel free to reach
-            out with any questions or requests.
-          </p>
+ <!-- Contact Us Section -->
+<section id="contact" class="py-5 contact-section" data-aos="fade-up">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-gradient">Contact Us</h2>
+      <p class="text-muted">Have a project in mind? We'd love to hear from you.</p>
+    </div>
+    <div class="row align-items-center">
+      <!-- Contact Info -->
+      <div class="col-md-6 mb-5 mb-md-0" data-aos="fade-right">
+        <h4 class="fw-semibold text-dark mb-3">Get in Touch</h4>
+        <p class="text-muted mb-4">
+          Feel free to contact us via email or phone. We're here to assist you with your digital transformation journey.
+        </p>
+        <div class="d-flex flex-column gap-3">
+          <a href="mailto:info@company.com" class="contact-link">
+            <i class="bi bi-envelope-fill me-2"></i>info@company.com
+          </a>
+          <a href="tel:+96897760250" class="contact-link">
+            <i class="bi bi-telephone-fill me-2"></i>+968 97760250
+          </a>
         </div>
-        <div class="row">
-          <!-- Left Column: Contact Information -->
-          <div class="col-md-6 mb-4">
-            <h4 class="fw-semibold text-dark">Get in Touch</h4>
-            <p class="text-muted">
-              We are here to help you with your business needs. Reach out to us
-              via email or phone.
-            </p>
-            <div class="d-flex flex-column gap-3 mt-3">
-              <a
-                href="mailto:info@company.com"
-                class="d-flex align-items-center text-decoration-none text-dark"
-              >
-                <i class="bi bi-envelope-fill me-2 text-primary"></i>
-                <span>info@company.com</span>
-              </a>
-              <a
-                href="tel:+96897760250"
-                class="d-flex align-items-center text-decoration-none text-dark"
-              >
-                <i class="bi bi-telephone-fill me-2 text-primary"></i>
-                <span>+968 97760250</span>
-              </a>
-              <iframe
-                title="Company Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.215169885484!2d58.17897327478673!3d23.575560895467117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8de3a86ccefdd7%3A0x502673e3deffb381!2sHarjah%20for%20Software%20Development!5e1!3m2!1sen!2som!4v1742809788692!5m2!1sen!2som"
-                width="100%"
-                height="300"
-                style="
-                  border: 1px solid #ccc;
-                  border-radius: 10px;
-                  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                "
-                allowfullscreen=""
-                loading="lazy"
-              ></iframe>
-            </div>
-          </div>
-
-          <!-- Right Column: Contact Form -->
-          <div class="col-md-6">
-            <form>
-              <div class="mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="First Name"
-                  aria-label="First Name"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Last Name"
-                  aria-label="Last Name"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Business Email"
-                  aria-label="Business Email"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <textarea
-                  class="form-control"
-                  rows="4"
-                  placeholder="How can we help you?"
-                  aria-label="Message"
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary w-100 fw-bold">
-                Submit
-              </button>
-            </form>
-          </div>
+        <div class="mt-4">
+          <iframe
+            title="Company Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.2151698854855!2d58.17897327478672!3d23.575560895467124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8de3a86ccefdd7%3A0x502673e3deffb381!2sHarjah%20for%20Software%20Development!5e1!3m2!1sen!2som!4v1745411864970!5m2!1sen!2som"
+            width="100%" height="300" allowfullscreen loading="lazy"
+            class="map-frame"
+          ></iframe>
         </div>
       </div>
-    </section>
+
+      <!-- Contact Form -->
+      <div class="col-md-6" data-aos="fade-left">
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="First Name" required />
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Last Name" required />
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Business Email" required />
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" rows="4" placeholder="How can we help you?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-gradient w-100">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- FOOTER -->
     <footer class="bg-dark text-white pt-5">
@@ -666,8 +648,15 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
       AOS.init();
+      var typed = new Typed("#typed-text", {
+    strings: ["Websites", "Mobile Apps", "Smart Solutions", "Your Vision into Code"],
+    typeSpeed: 60,
+    backSpeed: 30,
+    loop: true
+     });
     </script>
     <script>
 
@@ -678,6 +667,51 @@ window.addEventListener("load", function () {
     preloader.style.display = "none";
   }, 4000); // Updated to 4 seconds
 });
+
+const techToggleBtn = document.getElementById("techStackToggle");
+  const techPopup = document.getElementById("techPopup");
+  const techIcons = document.querySelectorAll(".tech-icon");
+
+  let timeoutId;
+
+  techToggleBtn.addEventListener("click", () => {
+    // Toggle display
+    const isVisible = techPopup.style.display === "block";
+    techPopup.style.display = isVisible ? "none" : "block";
+
+    // Clear any previous timeout
+    clearTimeout(timeoutId);
+
+    if (!isVisible) {
+      // Enlarge icons
+      techIcons.forEach((icon) => icon.classList.add("enlarged"));
+
+      // Set auto-close timer
+      timeoutId = setTimeout(() => {
+        techPopup.style.display = "none";
+        techIcons.forEach((icon) => icon.classList.remove("enlarged")); // Reset size
+      }, 3000);
+    } else {
+      // Reset icon size
+      techIcons.forEach((icon) => icon.classList.remove("enlarged"));
+    }
+  });
+
+   // Close popup when the close button is clicked
+   closeTechPopupBtn.addEventListener("click", () => {
+    techPopup.style.display = "none";
+    techIcons.forEach((icon) => icon.classList.remove("enlarged")); // Reset size
+    clearTimeout(timeoutId);
+  });
+
+  // Hide popup on outside click
+  document.addEventListener("click", (e) => {
+    if (!techPopup.contains(e.target) && !techToggleBtn.contains(e.target)) {
+      techPopup.style.display = "none";
+      techIcons.forEach((icon) => icon.classList.remove("enlarged")); // Reset size
+      clearTimeout(timeoutId);
+    }
+  });
 
       // Smooth scrolling with offset for fixed navbar
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -695,7 +729,6 @@ window.addEventListener("load", function () {
           });
         });
       });
-
 
       const langToggleBtn = document.getElementById("langToggle");
       langToggleBtn.addEventListener("click", () => {

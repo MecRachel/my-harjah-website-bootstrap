@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 #preloader {
   position: fixed;
   top: 0;
@@ -46,7 +50,7 @@
 
 /* === Base Styles === */
 body {
-  font-family: "IntIBM Plex Sanser", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   color: #333;
@@ -144,45 +148,166 @@ h3 {
   transform: scale(1.05);
 }
 
-/* Home Section */
+/* === Home Section Enhancements === */
 #home {
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-direction: column;
 }
 
 #home .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Black transparent overlay */
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.7)
+  );
   z-index: 1;
 }
 
-#home .text-center {
-  position: relative;
-  z-index: 2; /* Ensures content is above the overlay */
-}
-
-/* Background Image Fade-In Animation */
-@keyframes fadeInBackground {
+/* Fade in content */
+@keyframes fadeInUp {
   from {
+    transform: translateY(40px);
     opacity: 0;
   }
   to {
+    transform: translateY(0);
     opacity: 1;
   }
 }
 
-#home .carousel-item {
-  animation: fadeInBackground 2s ease-in-out;
-  opacity: 1;
+#home .content-wrapper {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 700px;
+  padding: 2rem;
+  animation: fadeInUp 1.2s ease-out;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Headline Styling */
+#home h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Subheadline */
+#home p.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: #f0f0f0;
+}
+
+/* CTA Buttons */
+#home .btn {
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#home .btn-primary {
+  background: linear-gradient(135deg, #00c9ff, #92fe9d);
+  color: #000;
+  border: none;
+}
+
+#home .btn-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+#home .btn-outline-light {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+#home .btn-outline-light:hover {
+  background: white;
+  color: #1779a3;
+  transform: translateY(-2px);
+}
+
+.tech-popup {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  background: linear-gradient(135deg, #1f1c2c, #928dab); /* Soft dark-purple gradient */
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  max-width: 320px;
+  z-index: 9999;
+  display: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  animation: fadeSlideUp 0.4s ease-out;
+}
+
+.tech-popup h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.tech-popup i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.tech-popup i:hover {
+  transform: scale(1.2);
+  color: #00f7ff;
+}
+
+.tech-icon {
+  max-width: 60px; /* Set a small size for the images */
+  max-height: 60px;
+  object-fit: contain; /* Maintain the aspect ratio of the images */
+  margin: 10px; /* Add spacing around each image */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.tech-icon:hover {
+  transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+
+.tech-icon.enlarged {
+  width: 80px; /* Enlarged size */
+  height: 80px;
+  transform: scale(1.2);
+}
+
+/* Smooth pop-in animation */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: Animate buttons on scroll */
+[data-aos] {
+  will-change: transform, opacity;
 }
 
 /* === Services Section === */
-
 .service-wrapper {
   position: relative;
   overflow: hidden;
@@ -250,7 +375,6 @@ h3 {
 }
 
 /* === About Section === */
-
 .about-section {
   background-color: #ffffff;
   padding: 50px 20px;
@@ -356,81 +480,65 @@ h3 {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
-/* Contact Us Section */
+/* Gradient Title */
+.text-gradient {
+  background: linear-gradient(90deg, #1779a3, #0b4a5c); /* Updated to match the theme */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Contact Section */
 .contact-section {
-  background-color: #80b6d531; /* Light background for contrast */
-  padding: 50px 20px; /* Adjust padding for consistent spacing */
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-top: 0; /* Remove any extra gap above the section */
-  padding-top: 0; /* Push the section to the very top */
+  background: #eef7fa; /* Softer blue-tinted background */
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
-.contact-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #000000; /* Black color for heading */
-}
-
-.contact-section h4 {
-  font-size: 1.5rem;
-  color: #000000; /* Black color for subheadings */
-  margin-bottom: 15px;
-}
-
-.contact-section p {
-  font-size: 1rem;
-  color: #000000; /* Black color for paragraph text */
-  line-height: 1.6;
-}
-
-.contact-section a {
-  font-size: 1rem;
-  color: #000000; /* Black color for links */
+.contact-link {
+  color: #1779a3; /* Updated to match the theme */
+  font-weight: 500;
+  transition: all 0.3s ease;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
-.contact-section a i.bi {
-  color: #126284 !important;
-  transition: color 0.3s ease;
+.contact-link i {
+  color: black; /* Change icon color to black */
+  font-size: 1.2rem;
 }
-
-.contact-section a:hover {
-  color: #126284; /* Slightly darker blue on hover for links */
+.contact-link:hover {
+  color: #0b4a5c; /* Darker blue for hover */
 }
 
-.contact-section iframe {
+.map-frame {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Form */
+.form-control {
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-form .form-control {
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #b3d9e0; /* Light blue border */
   transition: box-shadow 0.3s ease;
 }
-
-form .form-control:focus {
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+.form-control:focus {
+  box-shadow: 0 0 8px rgba(23, 121, 163, 0.4); /* Blue-tinted focus shadow */
+  border-color: #1779a3; /* Updated to match the theme */
 }
 
-button.btn {
-  border-radius: 8px;
+.btn-gradient {
+  background: linear-gradient(90deg, #00d1b2, #1779a3); /* Aqua to blue gradient */
+  color: #fff;
+  border: none;
   padding: 12px;
   font-weight: bold;
+  border-radius: 10px;
+  transition: background 0.3s ease;
 }
-
-button.btn-primary {
-  background-color: transparent; /* Black button */
-  border: 1.7px solid;
-  color: #126284;
-  transition: background-color 0.3s ease;
-}
-
-button.btn-primary:hover {
-  background-color: #126284; /* Darker blue on hover */
-  border-color: #126284;
+.btn-gradient:hover {
+  background: linear-gradient(90deg, #0b4a5c, #126284); /* Darker gradient for hover */
+  color: #fff;
 }
 
 /* === Footer === */
