@@ -1,6 +1,6 @@
 /* === Base Styles === */
 body {
-  font-family: 'IntIBM Plex Sanser', sans-serif;
+  font-family: "IntIBM Plex Sanser", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   color: #333;
@@ -12,7 +12,9 @@ section {
   padding: 100px 0;
 }
 
-h1, h2,h3 {
+h1,
+h2,
+h3 {
   font-weight: bold;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -22,45 +24,45 @@ h1, h2,h3 {
 .navbar {
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #126284;
 }
 
 .navbar.scrolled {
-  background: rgba(0, 109, 119, 0.9); /* Slightly darker background on scroll */
+  background: #1779a3; /* Slightly darker background on scroll */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
-
 .navbar .nav-link {
+  color: white;
+  position: relative;
   font-weight: 500;
-  color: white;
   transition: color 0.3s ease;
 }
 
-.navbar .nav-link:hover {
-  color: #e0f7fa; /* Lighter hover effect */
+/* When hovered */
+.navbar .nav-link:hover::after {
+  width: 100%;
 }
 
-.navbar .btn {
-  border-radius: 20px;
-  font-weight: 600;
-  background-color: #34495e;
-  color: white;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+/* Underline effect */
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background-color: white;
+  transition: width 0.3s ease-in;
 }
 
-.navbar .btn:hover {
-  background-color: #e55050;
-  transform: scale(1.05); /* Slight zoom effect */
+/* Highlight the active link using :target */
+section:target ~ .navbar .nav-link[href*="#about"],
+section:target ~ .navbar .nav-link[href*="#contact"] {
+  color: #1779a3;
 }
 
-.navbar .navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-  transition: color 0.3s ease;
-}
-
-.navbar .navbar-brand:hover {
-  color: #e0f7fa;
+.navbar .nav-link:target {
+  color: #1779a3;
 }
 
 /* Home Section */
@@ -101,6 +103,7 @@ h1, h2,h3 {
 }
 
 /* === Services Section === */
+
 .service-wrapper {
   position: relative;
   overflow: hidden;
@@ -151,34 +154,29 @@ h1, h2,h3 {
   color: #333;
 }
 
-.service-description .read-more {
+.service-description .btn {
   border-radius: 20px;
   padding: 6px 16px;
   font-weight: 500;
   background-color: transparent;
-  border: 2px solid #006d77;
-  color: #006d77;
+  border: 2px solid;
+  color: #126284;
   transition: all 0.3s ease;
 }
 
-.service-description .read-more:hover {
-  background-color: #006d77;
+.service-description .btn:hover {
+  background-color: #126284;
   color: white;
-  border-color: #006d77;
+  border-color: #126284;
 }
 
 /* === About Section === */
+
 .about-section {
   background-color: #ffffff;
   padding: 50px 20px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.about-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  text-align: center;
 }
 
 /* Wrapper for Image and Text */
@@ -219,7 +217,6 @@ h1, h2,h3 {
   margin-top: 20px;
   padding: 10px 20px;
   border-radius: 20px;
-  background-color: #34495e;
   color: white;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -232,7 +229,7 @@ h1, h2,h3 {
 /* === Info Boxes (Vision, Features, etc.) === */
 .about-box {
   background-color: #ffffff;
-  border-left: 5px solid #118ab2;
+  border-left: 5px solid #126284;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   padding: 1.5rem;
@@ -247,14 +244,13 @@ h1, h2,h3 {
 
 /* Icon Styling + Hover Effects */
 .about-box i {
-  color: #118ab2;
+  color: #126284;
   font-size: 1.8rem;
   margin-right: 1rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .about-box:hover i {
-  color: #006d77;
   transform: scale(1.2);
 }
 
@@ -283,7 +279,7 @@ h1, h2,h3 {
 
 /* Contact Us Section */
 .contact-section {
-  background-color: #edf6f9; /* Light background for contrast */
+  background-color: #80b6d531; /* Light background for contrast */
   padding: 50px 20px; /* Adjust padding for consistent spacing */
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -316,14 +312,13 @@ h1, h2,h3 {
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
-.contact-section a:hover {
-  color: #0056b3; /* Slightly darker blue on hover for links */
+.contact-section a i.bi {
+  color: #126284 !important;
+  transition: color 0.3s ease;
 }
 
-.contact-section i {
-  color: #000000; /* Black color for icons */
-  font-size: 1.2rem;
+.contact-section a:hover {
+  color: #126284; /* Slightly darker blue on hover for links */
 }
 
 .contact-section iframe {
@@ -348,14 +343,15 @@ button.btn {
 }
 
 button.btn-primary {
-  background-color: #000000; /* Black button */
-  border-color: #000000;
+  background-color: transparent; /* Black button */
+  border: 1.7px solid;
+  color: #126284;
   transition: background-color 0.3s ease;
 }
 
 button.btn-primary:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  border-color: #0056b3;
+  background-color: #126284; /* Darker blue on hover */
+  border-color: #126284;
 }
 
 /* === Footer === */
@@ -387,5 +383,5 @@ button.btn-primary:hover {
 }
 
 .footer .icon:hover {
-  color: #0d6efd;
+  color: #126284;
 }
