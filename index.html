@@ -188,7 +188,7 @@
       <!-- WhatsApp Button 
       <a href="https://wa.me/971501234567" target="_blank" class="btn btn-outline-light btn-lg px-4">
         <i class="bi bi-whatsapp me-2"></i>Book a Free Consultation
-      </a> -->
+      </a> 
 
 <!-- Tech Stack Button -->
 <button
@@ -384,6 +384,7 @@
       <div class="container">
         <!-- Section Title -->
         <h3 class="text-center mb-5 fw-bold">About Us</h3>
+
 
         <!-- Company Background Section -->
         <div class="row align-items-center mb-5" data-aos="fade-up">
@@ -697,12 +698,13 @@ const techToggleBtn = document.getElementById("techStackToggle");
     }
   });
 
-   // Close popup when the close button is clicked
-   closeTechPopupBtn.addEventListener("click", () => {
-    techPopup.style.display = "none";
-    techIcons.forEach((icon) => icon.classList.remove("enlarged")); // Reset size
-    clearTimeout(timeoutId);
-  });
+const closeTechPopupBtn = document.getElementById("closeTechPopup");
+// Close popup when the close button is clicked
+closeTechPopupBtn.addEventListener("click", () => {
+  techPopup.style.display = "none";
+  techIcons.forEach((icon) => icon.classList.remove("enlarged")); // Reset size
+  clearTimeout(timeoutId);
+});
 
   // Hide popup on outside click
   document.addEventListener("click", (e) => {
@@ -731,160 +733,109 @@ const techToggleBtn = document.getElementById("techStackToggle");
       });
 
       const langToggleBtn = document.getElementById("langToggle");
-      langToggleBtn.addEventListener("click", () => {
-        const currentLang = document.documentElement.lang;
-        if (currentLang === "en") {
-          // Switch to Arabic
-          document.documentElement.lang = "ar";
-          document.body.dir = "rtl";
+langToggleBtn.addEventListener("click", () => {
+  const currentLang = document.documentElement.lang;
+  if (currentLang === "en") {
+    // Switch to Arabic
+    document.documentElement.lang = "ar";
+    document.body.dir = "rtl";
+    langToggleBtn.innerHTML = '<i class="bi bi-globe"></i> English';
 
-      // Update button text to "English"
-      langToggleBtn.innerHTML = '<i class="bi bi-globe"></i> English';
+    // Navbar
+    document.querySelector(".nav-link[href='#home']").textContent = "الرئيسية";
+    document.querySelector(".nav-link[href='#services']").textContent = "الخدمات";
+    document.querySelector(".nav-link[href='#about']").textContent = "معلومات عنا";
+    document.querySelector(".nav-link[href='#contact']").textContent = "اتصل بنا";
 
-          // Update text content to Arabic
-          document.querySelector(".navbar-brand").textContent = "هرجة";
-          document.querySelector(".nav-link[href='#home']").textContent =
-            "الرئيسية";
-          document.querySelector(".nav-link[href='#services']").textContent =
-            "الخدمات";
-          document.querySelector(".nav-link[href='#about']").textContent =
-            "معلومات عنا";
-          document.querySelector(".nav-link[href='#contact']").textContent =
-            "اتصل بنا";
-          document.querySelector("#home h1").textContent = "مرحبًا بكم في هرجة";
-          document.querySelector("#home p").textContent =
-            "نقدم حلولاً مبتكرة لاحتياجات عملك";
-          document.querySelector("#services h2").textContent = "خدماتنا";
+    // Home Section
+    document.querySelector("#home h1").textContent = "مرحبًا بكم في هرجة";
+    document.querySelector("#home p").textContent = "نقدم حلولاً مبتكرة لاحتياجات عملك";
 
-          // Update "Services" section
-          const serviceTitles = document.querySelectorAll("#services h3");
-          serviceTitles[0].innerHTML = "تطوير <br/> المواقع";
-          serviceTitles[1].innerHTML = "تطوير <br/> التطبيقات";
-          serviceTitles[2].innerHTML = "تصميم <br/> واجهات المستخدم";
+    // Services Section
+    document.querySelector("#services h2").textContent = "خدماتنا";
+    const serviceTitles = document.querySelectorAll("#services h3");
+    if (serviceTitles.length > 0) serviceTitles[0].innerHTML = "تطوير <br/> المواقع";
+    if (serviceTitles.length > 1) serviceTitles[1].innerHTML = "تطوير <br/> التطبيقات";
+    if (serviceTitles.length > 2) serviceTitles[2].innerHTML = "تصميم <br/> واجهات المستخدم";
+    const serviceDescriptions = document.querySelectorAll("#services .service-description p");
+    if (serviceDescriptions.length > 0) serviceDescriptions[0].textContent = "ارتقِ بعلامتك التجارية من خلال مواقع وتطبيقات ويب عالية الأداء وقابلة للتطوير.";
+    if (serviceDescriptions.length > 1) serviceDescriptions[1].textContent = "عزز عملك بتطبيقات جوال أنيقة وعالية الأداء لنظامي iOS و Android.";
+    if (serviceDescriptions.length > 2) serviceDescriptions[2].textContent = "أبهر جمهورك بتصاميم مذهلة تركز على المستخدم.";
+    const serviceButtons = document.querySelectorAll("#services .service-description button");
+    serviceButtons.forEach(btn => btn.textContent = "اقرأ المزيد");
 
-          const serviceDescriptions = document.querySelectorAll(
-            "#services .service-description p"
-          );
-          serviceDescriptions[0].textContent =
-            "ارتقِ بعلامتك التجارية من خلال مواقع وتطبيقات ويب عالية الأداء وقابلة للتطوير.";
-          serviceDescriptions[1].textContent =
-            "عزز عملك بتطبيقات جوال أنيقة وعالية الأداء لنظامي iOS و Android.";
-          serviceDescriptions[2].textContent =
-            "أبهر جمهورك بتصاميم مذهلة تركز على المستخدم.";
+    // About Us Section
+    document.querySelector("#about .fw-bold").textContent = "معلومات عنا";
+    document.querySelector("#about h5.fw-semibold").textContent = "خلفية الشركة";
+    document.querySelector("#about h4.fw-semibold.text-center.mb-4").textContent = "لماذا نحن؟";
+    // Company background paragraphs
+    const aboutBoxParagraphs = document.querySelectorAll("#about .about-box p.text-secondary");
+    if (aboutBoxParagraphs.length > 0) aboutBoxParagraphs[0].textContent = "تأسست هرجة في قلب مسقط، وهي شركة تطوير برمجيات ديناميكية مدفوعة بشغف التكنولوجيا والابتكار.";
+    if (aboutBoxParagraphs.length > 1) aboutBoxParagraphs[1].textContent = "نحن متخصصون في إنشاء مواقع ويب وتطبيقات جوال وخدمات تقنية معلومات متطورة تلبي متطلبات السوق الحديثة. حلولنا قابلة للتطوير وآمنة وسهلة الاستخدام، مصممة للشركات الناشئة والمؤسسات والعملاء الأفراد عبر مختلف الصناعات.";
+    // Why Choose Us features
+    const featureTitles = document.querySelectorAll("#about .about-box h6.fw-bold");
+    if (featureTitles.length > 0) featureTitles[0].textContent = "حلول مخصصة";
+    if (featureTitles.length > 1) featureTitles[1].textContent = "خبرة شاملة";
+    if (featureTitles.length > 2) featureTitles[2].textContent = "تقنية موثوقة وقابلة للتطوير";
+    if (featureTitles.length > 3) featureTitles[3].textContent = "التزام بالتميز";
+    if (aboutBoxParagraphs.length > 2) aboutBoxParagraphs[2].textContent = "كل عمل فريد من نوعه. نأخذ الوقت لفهم احتياجاتك ونبني حلولاً مخصصة تناسب أهدافك.";
+    if (aboutBoxParagraphs.length > 3) aboutBoxParagraphs[3].textContent = "من التصميم إلى النشر، ندير دورة التطوير الكاملة بدقة واهتمام.";
+    if (aboutBoxParagraphs.length > 4) aboutBoxParagraphs[4].textContent = "نستخدم أحدث الأطر وأفضل الممارسات لضمان أن منتجك آمن وقابل للتطوير ومستقبلي.";
+    if (aboutBoxParagraphs.length > 5) aboutBoxParagraphs[5].textContent = "نقدم كفاءة الشركات الكبيرة مع لمسة شخصية لفريق مخصص.";
 
-          const serviceButtons = document.querySelectorAll(
-            "#services .service-description button"
-          );
-          serviceButtons.forEach(
-            (button) => (button.textContent = "اقرأ المزيد")
-          );
+    // TODO: Add similar code for Contact section and Footer if needed
 
-          // Update "About Us" section
-          document.querySelector("#about h2").textContent = "معلومات عنا";
-          const aboutHeadings = document.querySelectorAll("#about h3");
-          aboutHeadings[0].textContent = "خلفية الشركة";
-          aboutHeadings[1].textContent = "رؤيتنا";
-          aboutHeadings[2].textContent = "الفريق";
-          aboutHeadings[3].textContent = "لماذا نحن؟";
+  } else {
+    // Switch to English
+    document.documentElement.lang = "en";
+    document.body.dir = "ltr";
+    langToggleBtn.innerHTML = '<i class="bi bi-globe"></i> عربي';
 
-          const aboutParagraphs = document.querySelectorAll("#about p");
-          aboutParagraphs[0].textContent =
-            "تأسست هرجة في قلب مسقط، وهي شركة تطوير برمجيات ديناميكية مدفوعة بشغف التكنولوجيا والابتكار.";
-          aboutParagraphs[1].textContent =
-            "تم إنشاؤها برؤية تحويل الأعمال من خلال الحلول الرقمية، نحن متخصصون في إنشاء مواقع ويب وتطبيقات جوال وخدمات تقنية معلومات متطورة تلبي متطلبات السوق الحديثة.";
-          aboutParagraphs[2].textContent =
-            "تمتد خبرتنا عبر مختلف الصناعات، مما يساعد الشركات الناشئة والمؤسسات والأفراد على بناء تجارب رقمية قابلة للتطوير وآمنة وسهلة الاستخدام.";
-          aboutParagraphs[3].textContent =
-            "في هرجة، نؤمن بأن التكنولوجيا يجب أن تكون وسيلة تمكين وليست عائقًا. رؤيتنا هي تمكين الشركات من التحول الرقمي السلس من خلال التصميم البديهي والتطوير القوي والاستشارات التقنية الاستراتيجية. نسعى لسد الفجوة بين الأفكار والتنفيذ، مما يضمن أن كل حل نقدمه يحقق نموًا وكفاءة قابلة للقياس.";
-          aboutParagraphs[4].textContent =
-            "نحن فريق صغير ولكن قوي مكون من شخصين - ماهرين وشغوفين ومكرسين لبناء حلول رقمية مؤثرة. بمزيج من الإبداع والخبرة التقنية ومهارات حل المشكلات، نعمل عن كثب مع العملاء لتحويل رؤاهم إلى واقع. تتيح لنا مرونتنا التكيف بسرعة والابتكار بكفاءة وتقديم اهتمام شخصي لكل مشروع نقوم به.";
+    // Navbar
+    document.querySelector(".nav-link[href='#home']").textContent = "Home";
+    document.querySelector(".nav-link[href='#services']").textContent = "Services";
+    document.querySelector(".nav-link[href='#about']").textContent = "About Us";
+    document.querySelector(".nav-link[href='#contact']").textContent = "Contact Us";
 
-          const aboutListItems = document.querySelectorAll("#about ul li");
-          aboutListItems[0].innerHTML =
-            "<strong>حلول مخصصة</strong> – كل عمل فريد من نوعه، وكذلك حلولنا. نأخذ الوقت لفهم احتياجاتك ونصمم برامج مخصصة تناسب أهدافك.";
-          aboutListItems[1].innerHTML =
-            "<strong>خبرة شاملة</strong> – من التصميم إلى النشر، نتولى دورة التطوير الكاملة، مما يضمن نتائج عالية الجودة.";
-          aboutListItems[2].innerHTML =
-            "<strong>تقنية موثوقة وقابلة للتطوير</strong> – نستخدم تقنيات حديثة وأفضل الممارسات لبناء منتجات رقمية قابلة للتطوير ومستقبلية.";
-          aboutListItems[3].innerHTML =
-            "<strong>التزام بالتميز</strong> – على الرغم من كوننا فريقًا صغيرًا، فإننا نقدم بكفاءة وخبرة شركة كبيرة مع الحفاظ على نهج شخصي.";
-        } else {
-          // Switch to English
-          document.documentElement.lang = "en";
-          document.body.dir = "ltr";
+    // Home Section
+    document.querySelector("#home h1").textContent = "Welcome to Harjah";
+    document.querySelector("#home p").textContent = "We provide innovative solutions for your business needs";
 
-          // Update button text to "عربي"
-          langToggleBtn.innerHTML = '<i class="bi bi-globe"></i> عربي';
+    // Services Section
+    document.querySelector("#services h2").textContent = "Our Services";
+    const serviceTitles = document.querySelectorAll("#services h3");
+    if (serviceTitles.length > 0) serviceTitles[0].innerHTML = "Web <br/> Development";
+    if (serviceTitles.length > 1) serviceTitles[1].innerHTML = "Mobile <br/> Development";
+    if (serviceTitles.length > 2) serviceTitles[2].innerHTML = "UI <br/> Design";
+    const serviceDescriptions = document.querySelectorAll("#services .service-description p");
+    if (serviceDescriptions.length > 0) serviceDescriptions[0].textContent = "Elevate your brand with high-performance, scalable websites and web applications.";
+    if (serviceDescriptions.length > 1) serviceDescriptions[1].textContent = "Power up your business with sleek, high-performing mobile apps for iOS and Android.";
+    if (serviceDescriptions.length > 2) serviceDescriptions[2].textContent = "Captivate your audience with stunning, user-centric designs.";
+    const serviceButtons = document.querySelectorAll("#services .service-description button");
+    serviceButtons.forEach(btn => btn.textContent = "Read More");
 
-          // Update text content to English
-          document.querySelector(".navbar-brand").textContent = "Harjah";
-          document.querySelector(".nav-link[href='#home']").textContent =
-            "Home";
-          document.querySelector(".nav-link[href='#services']").textContent =
-            "Services";
-          document.querySelector(".nav-link[href='#about']").textContent =
-            "About Us";
-          document.querySelector(".nav-link[href='#contact']").textContent =
-            "Contact Us";
-          document.querySelector("#home h1").textContent = "Welcome to Harjah";
-          document.querySelector("#home p").textContent =
-            "We provide innovative solutions for your business needs";
-          document.querySelector("#services h2").textContent = "Our Services";
+    // About Us Section
+    document.querySelector("#about .fw-bold").textContent = "About Us";
+    document.querySelector("#about h5.fw-semibold").textContent = "Company Background";
+    document.querySelector("#about h4.fw-semibold.text-center.mb-4").textContent = "Why Choose Us?";
+    // Company background paragraphs
+    const aboutBoxParagraphs = document.querySelectorAll("#about .about-box p.text-secondary");
+    if (aboutBoxParagraphs.length > 0) aboutBoxParagraphs[0].textContent = "Founded in the heart of Muscat, Harjah is a dynamic software development company driven by a passion for technology and innovation.";
+    if (aboutBoxParagraphs.length > 1) aboutBoxParagraphs[1].textContent = "We specialize in crafting cutting-edge websites, mobile applications, and IT services tailored to meet modern market demands. Our solutions are scalable, secure, and user-friendly—designed for startups, enterprises, and individual clients across various industries.";
+    // Why Choose Us features
+    const featureTitles = document.querySelectorAll("#about .about-box h6.fw-bold");
+    if (featureTitles.length > 0) featureTitles[0].textContent = "Tailored Solutions";
+    if (featureTitles.length > 1) featureTitles[1].textContent = "End-to-End Expertise";
+    if (featureTitles.length > 2) featureTitles[2].textContent = "Reliable & Scalable Tech";
+    if (featureTitles.length > 3) featureTitles[3].textContent = "Commitment to Excellence";
+    if (aboutBoxParagraphs.length > 2) aboutBoxParagraphs[2].textContent = "Every business is unique. We take time to understand your needs and build custom solutions that meet your goals.";
+    if (aboutBoxParagraphs.length > 3) aboutBoxParagraphs[3].textContent = "From design to deployment, we manage the full development cycle with precision and care.";
+    if (aboutBoxParagraphs.length > 4) aboutBoxParagraphs[4].textContent = "We use modern frameworks and best practices to ensure your product is secure, scalable, and future-proof.";
+    if (aboutBoxParagraphs.length > 5) aboutBoxParagraphs[5].textContent = "We bring the efficiency of a large firm with the personal touch of a dedicated team.";
 
-          // Update "Services" section
-          const serviceTitles = document.querySelectorAll("#services h3");
-          serviceTitles[0].innerHTML = "Web <br/> Development";
-          serviceTitles[1].innerHTML = "Mobile <br/> Development";
-          serviceTitles[2].innerHTML = "UI <br/> Design";
-
-          const serviceDescriptions = document.querySelectorAll(
-            "#services .service-description p"
-          );
-          serviceDescriptions[0].textContent =
-            "Elevate your brand with high-performance, scalable websites and web applications.";
-          serviceDescriptions[1].textContent =
-            "Power up your business with sleek, high-performing mobile apps for iOS and Android.";
-          serviceDescriptions[2].textContent =
-            "Captivate your audience with stunning, user-centric designs.";
-
-          const serviceButtons = document.querySelectorAll(
-            "#services .service-description button"
-          );
-          serviceButtons.forEach(
-            (button) => (button.textContent = "Read More")
-          );
-
-          // Update "About Us" section
-          document.querySelector("#about h2").textContent = "About Us";
-          const aboutHeadings = document.querySelectorAll("#about h3");
-          aboutHeadings[0].textContent = "Company Background";
-          aboutHeadings[1].textContent = "Our Vision";
-          aboutHeadings[2].textContent = "Team";
-          aboutHeadings[3].textContent = "Why Us?";
-
-          const aboutParagraphs = document.querySelectorAll("#about p");
-          aboutParagraphs[0].textContent =
-            "Founded in the heart of Muscat, Harjah is a dynamic software development company driven by a passion for technology and innovation.";
-          aboutParagraphs[1].textContent =
-            "Established with the vision of transforming businesses through digital solutions, we specialize in crafting cutting-edge websites, mobile applications, and IT services tailored to meet modern market demands.";
-          aboutParagraphs[2].textContent =
-            "Our expertise spans across various industries, helping startups, enterprises, and individuals build digital experiences that are scalable, secure, and user-friendly.";
-          aboutParagraphs[3].textContent =
-            "At Harjah, we believe technology should be an enabler, not a barrier. Our vision is to empower businesses with seamless digital transformation through intuitive design, robust development, and strategic IT consulting. We strive to bridge the gap between ideas and execution, ensuring that every solution we deliver drives measurable growth and efficiency.";
-          aboutParagraphs[4].textContent =
-            "We are a small but mighty team of two—skilled, passionate, and committed to building impactful digital solutions. With a blend of creativity, technical expertise, and problem-solving skills, we work closely with clients to transform their visions into reality. Our agility allows us to adapt quickly, innovate efficiently, and provide personalized attention to every project we undertake.";
-
-          const aboutListItems = document.querySelectorAll("#about ul li");
-          aboutListItems[0].innerHTML =
-            "<strong>Tailored Solutions</strong> – Every business is unique, and so are our solutions. We take the time to understand your needs and craft custom software that fits your goals.";
-          aboutListItems[1].innerHTML =
-            "<strong>End-to-End Expertise</strong> – From design to deployment, we handle the entire development lifecycle, ensuring high-quality results.";
-          aboutListItems[2].innerHTML =
-            "<strong>Reliable & Scalable Technology</strong> – We use modern technologies and best practices to build scalable and future-proof digital products.";
-          aboutListItems[3].innerHTML =
-            "<strong>Commitment to Excellence</strong> – Despite being a small team, we deliver with the efficiency and expertise of a large-scale company while maintaining a personalized approach.";
-        }
-      });
+    // TODO: Add similar code for Contact section and Footer if needed
+  }
+});
     </script>
   </body>
 </html>
